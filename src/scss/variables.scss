@@ -1,8 +1,24 @@
-$col: #000;
+$col-gray: #d4d6dd;
+$col-green: #4cc90b;
+$col-main: #1a1a25;
+$col-midlegray: #666666;
+$col-red: #fb0005;
+$col-blue: #006fed;
+$col-yellow: #ffcf01;
+$col-purple: #ba0ec6;
+$col: #333;
 
-$bg: #fff;
+$font-size-main: 24px;
+$font-size-midle: 22px;
+$font-size-small: 18px;
 
-$font-main: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-$font-second: Cambria, Georgia, "Times New Roman", Times, serif;
+$bg: #ffffff;
+$bg-gray: #f2f1f0;
+
+$font-main: "Open Sans", BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+$font-second: Roboto, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+$path: "";
 
 
+$shadow-lightgrey: -7px 7px 18px 0px rgba(153,153,153,0.65);
+$shadow-lightgrey-mobile: 0 7px 7px 2px rgba(153,153,153,0.35);

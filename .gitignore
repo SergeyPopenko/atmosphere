@@ -11,3 +11,13 @@ Thumbs.db
 build/
 node_modules/
 resources/
+/wp-content/themes/twenty*
+/wp-content/upgrade
+/sitemap.*
+/wp-config.php
+/gulpfile.js
+ 
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
+*~imageoptim*

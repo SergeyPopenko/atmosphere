@@ -1,16 +1,16 @@
 html {
   box-sizing: border-box;
-
-  font-size: 14px;
+  font: 24px/2 $font-main;
 }
 
 body {
   background: $bg;
-
-  color: $col;
-
+  color: $col-main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 90px;
+  font-family: inherit;
+  overflow-x: hidden;
 }
 
 *,
@@ -23,6 +23,34 @@ body {
   @include visually-hidden;
 }
 
+.hidden {
+  @media #{$t-m} {
+    @include visually-hidden;
+  }
+}
+
 .body-popup {
   overflow: hidden;
+}
+
+.wrap {
+}
+
+@media #{$d-x} and #{$d-m} {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media #{$t} and #{$t-m} {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media #{$s} {
+  html {
+    font-size: 16px;
+    line-height: 1.13;
+  }
 }
