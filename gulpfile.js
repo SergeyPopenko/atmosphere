@@ -36,7 +36,7 @@ const themeName = "atmosphere";
 const sourceFolderName = "src";
 const buildFolder = `wp-content/themes/${themeName}`;
 
-const proxyName = "http://atmosphere/";
+const proxyName = "http://atmosphere.loc/";
 
 var path = {
   src: {

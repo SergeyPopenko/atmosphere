@@ -188,7 +188,6 @@ body {
   color: #1a1a25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 90px;
   font-family: inherit;
   overflow-x: hidden; }
 
@@ -241,15 +240,160 @@ body {
     font-size: 16px;
     line-height: 1.13; } }
 
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/main/main-bg.jpg) no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.main-container__content {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .player {
-  background: #999; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+  height: 90vh;
+  max-height: 460px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: -25vh; }
+
+.player__inner {
+  width: 70%;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px; }
+
+.player__item {
+  border-radius: 10px;
+  padding: 10px;
+  height: 100%;
+  background: rgba(225, 225, 225, 0.7);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: -1; }
+  .player__item.active {
+    z-index: 1;
+    top: 0;
+    position: static; }
+  .player__item p {
+    margin: 0; }
+  .player__item .wp-playlist {
+    margin-bottom: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: solid 1px #737171; }
+  .player__item .wp-playlist-light {
+    background-color: transparent; }
+    .player__item .wp-playlist-light .wp-playlist-playing {
+      border-radius: 5px;
+      background: #e1e1e1; }
+    .player__item .wp-playlist-light .wp-playlist-item:hover {
+      background: #e1e1e1; }
+  .player__item .wp-playlist-tracks {
+    max-height: 250px;
+    overflow-y: auto; }
+  .player__item .mejs-container,
+  .player__item .mejs-controls {
+    border-radius: 10px; }
+  .player__item .wp-playlist-current-item img {
+    border-radius: 5px; }
+
+.player__playlist {
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(225, 225, 225, 0.4); }
+
+.player__playlist-inner {
+  position: relative; }
+
+.player__playlist-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0; }
+
+.player__playlist-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  padding: 10px 0;
+  line-height: 1.5;
+  max-height: 400px;
+  overflow-y: auto; }
+  .player__playlist-list a {
+    display: block;
+    color: inherit;
+    text-decoration: none; }
+
+.player__playlist-item {
+  background: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5px;
+  margin-bottom: 2px; }
+  .player__playlist-item span {
+    -webkit-transition: padding .3s ease-out;
+    transition: padding .3s ease-out; }
+  .player__playlist-item:hover:not(.active) {
+    background: rgba(225, 225, 225, 0.7); }
+    .player__playlist-item:hover:not(.active) span {
+      padding-left: 10px; }
+  .player__playlist-item.active {
+    background: rgba(225, 225, 225, 0.7);
+    font-weight: 700; }
+    .player__playlist-item.active span {
+      text-decoration: underline; }
+
+.player__item-description {
+  margin: 0; }
+
+.player__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0; }
+
+.player__item-date {
+  font-size: 12px;
+  line-height: 1.2; }
 
 .blog-block {
-  background: #999; }
+  background: #999;
+  display: none; }
 
 .footer {
   background: #d4d6dd;
-  padding: 1.83em 0 1.42em; }
+  margin-top: -3em;
+  color: #000;
+  height: 3em; }
 
 .footer__wrap {
   display: -webkit-box;
@@ -289,3 +433,24 @@ body {
   .footer__copyright small {
     font-size: 0.75em;
     line-height: 1.5; } }
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5; }
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #cccccc;
+  -webkit-box-shadow: inset 0 0 1px 1px #5c6670;
+          box-shadow: inset 0 0 1px 1px #5c6670;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s; }
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #eeeeee;
+  -webkit-box-shadow: 0 0 1px 1px #bbbbbb, inset 0 0 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 1px 1px #bbbbbb, inset 0 0 7px rgba(0, 0, 0, 0.3); }
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa; }

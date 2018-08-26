@@ -1,3 +1,157 @@
 .player {
-  background: #999;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 90vh;
+  max-height: 460px;
+  align-items: stretch;
+  margin-top: -25vh;
 }
+
+.player__inner {
+  width: 70%;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.player__item {
+  border-radius: 10px;
+  padding: 10px;
+  height: 100% ;
+  background: rgba(225, 225, 225, .7) ;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+
+  &.active{
+    z-index: 1;
+    top:0;
+    position: static;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .wp-playlist {
+    margin-bottom: 0;
+    border-right:0;
+    border-bottom:0;
+    border-left:0;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: solid 1px #737171;
+  }
+
+  .wp-playlist-light {
+    background-color: transparent;
+
+    .wp-playlist-playing {
+      border-radius: 5px;
+      background: rgba(225, 225, 225, 1) ;
+    }
+
+    .wp-playlist-item {
+      &:hover {
+        background:  rgba(225, 225, 225, 1);
+      }
+    }
+  }
+
+
+  .wp-playlist-tracks {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .mejs-container,
+  .mejs-controls  {
+    border-radius: 10px;
+  }
+
+  .wp-playlist-current-item img {
+    border-radius: 5px;
+  }
+}
+
+.player__playlist {
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(225, 225, 225, .4) ;
+}
+
+.player__playlist-inner {
+  position: relative;
+}
+
+.player__playlist-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.player__playlist-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  padding: 10px 0;
+  line-height: 1.5;
+  max-height: 400px;
+  overflow-y: auto;
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.player__playlist-item {
+  background: transparent;
+  transition: .3s;
+  border-radius: 5px;
+  margin-bottom: 2px;
+
+  span {
+   transition: padding .3s ease-out;
+  }
+
+  &:hover:not(.active) {
+    background: rgba(225, 225, 225, .7) ;
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  &.active {
+    background: rgba(225, 225, 225, .7) ;
+    font-weight: 700;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.player__item-description {
+  margin: 0;
+}
+
+.player__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.player__item-date {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
