@@ -1,4 +1,5 @@
 <section class="player" data-player>
+  <h2 class="visually-hidden">Player for atmospheric music"</h2>
   <div class="player__playlist">
     <p class="player__playlist-title">All playlists</p>
     <ul class="player__playlist-list" data-playlist-list>

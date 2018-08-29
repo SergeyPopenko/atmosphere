@@ -321,8 +321,15 @@ body {
   .player__item .mejs-container,
   .player__item .mejs-controls {
     border-radius: 10px; }
+    .player__item .mejs-container .mejs-controls,
+    .player__item .mejs-controls .mejs-controls {
+      background-color: transparent; }
+  .player__item .mejs-container {
+    background: rgba(0, 0, 0, 0.4); }
   .player__item .wp-playlist-current-item img {
     border-radius: 5px; }
+  .player__item .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #666; }
 
 .player__playlist {
   width: 30%;
@@ -386,12 +393,32 @@ body {
   line-height: 1.2; }
 
 .blog-block {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background: #999;
-  display: none; }
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow-x: auto;
+  z-index: 20;
+  overflow-y: auto;
+  width: 80vw;
+  background: url(../img//blog/blog-bg.jpg) no-repeat;
+  background-size: cover; }
+
+.blog-block__container {
+  height: 100%; }
+
+.blog-items {
+  padding: 0 30px;
+  background: rgba(225, 225, 225, 0.4); }
 
 .footer {
   background: #d4d6dd;
-  margin-top: -3em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   color: #000;
   height: 3em; }
 

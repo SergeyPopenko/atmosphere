@@ -1,4 +1,22 @@
 .blog-block {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
   background: #999;
-  display: none;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow-x: auto;
+  z-index: 20;
+  overflow-y: auto;
+  width: 80vw;
+  background: url(../img//blog/blog-bg.jpg) no-repeat;
+  background-size:  cover;
+}
+
+.blog-block__container {
+  height: 100%;
+}
+
+.blog-items {
+  padding: 0 30px;
+  background: rgba(225, 225, 225, .4);
 }

@@ -71,10 +71,22 @@
   .mejs-container,
   .mejs-controls  {
     border-radius: 10px;
+
+    .mejs-controls {
+      background-color: transparent;
+    }
+  }
+
+  .mejs-container {
+    background: rgba(0, 0, 0, .4) ;
   }
 
   .wp-playlist-current-item img {
     border-radius: 5px;
+  }
+
+  .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #666;
   }
 }
 
