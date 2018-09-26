@@ -1,23 +1,24 @@
-<section class="blog-block">
+<section class="blog-block" data-blog-section>
   <h2 class="visually-hidden">Blog for atmospheric music"</h2>
   <div class="blog-block__container">
     <div class="blog-block__inner">
-      <div class="blog-items">
+      <div class="blog-block__items">
         <?php $query = new WP_Query(['category_name' => 'blog']); ?>
         <?php if($query->have_posts()): ?>
           <?php while($query->have_posts()): ?>
-            <div class="blog-item">
+            <div class="blog-block__item">
               <?php $query->the_post(); ?>
-              <div class="blog-item__title"><?php the_title(); ?></div>
-              <p class="blog-item__description"><?php the_content(); ?></p>
-              <span class="blog-item_date"><?= get_the_date(); ?></span>
+              <h3 class="blog-block__item-title"><?php the_title(); ?></h3>
+              <div class="blog-block__item-description"><?php the_content(); ?></div>
+              <time class="blog-block__item-date"><i> <?= get_the_date(); ?></i></time>
             </div>
-            <br>
           <?php endwhile; ?>
         <?php endif; ?>
       </div>
     </div>
   </div>
 </section>
+
+
 
 

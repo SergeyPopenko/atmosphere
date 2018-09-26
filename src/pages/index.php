@@ -4,6 +4,7 @@
 
 <?php get_template_part('includes/player/player'); ?>
 <?php get_template_part('includes/blog-block/blog-block'); ?>
+<?php get_template_part('includes/toggle-btn/toggle-btn'); ?>
 </div>
 
 <?php get_footer(); ?>
