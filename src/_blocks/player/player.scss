@@ -1,12 +1,19 @@
 .player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.player__wrap {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 80vw;
-  height: 90vh;
-  max-height: 460px;
+  height: 460px;
+  width: 100%;
+  max-height: calc(100vh - 180px);
   align-items: stretch;
-  margin-top: -25vh;
+  overflow: hidden;
 }
 
 .player__inner {
