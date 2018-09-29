@@ -1,7 +1,7 @@
 <header class="header">
   <div class="wrap header__container">
     <p class="header__part header__part--logo">
-      <img src="wp-content/themes/atmosphere/img/logo/header-logo-new2.png" alt="logo atmosphere music">
+      <img src="<?= get_option('my_site_logo') ?>" alt="<?= get_option('my_site_name') ?>">
     </p>
      <p class="header__part header__part--decor">
       <img src="wp-content/themes/atmosphere/img/header/header-decor.png" alt="Decor image">
